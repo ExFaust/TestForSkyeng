@@ -1,4 +1,4 @@
-package com.exfaust.testforskyeng.utils
+package com.exfaust.testforskyeng.data.model
 
 enum class Events {
     SUCCESS,

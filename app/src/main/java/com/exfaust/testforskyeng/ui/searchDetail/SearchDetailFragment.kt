@@ -1,7 +1,6 @@
 package com.exfaust.testforskyeng.ui.searchDetail
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,6 @@ import androidx.navigation.findNavController
 import com.exfaust.testforskyeng.GlideApp
 import com.exfaust.testforskyeng.R
 import com.exfaust.testforskyeng.data.model.Meanings
-import com.exfaust.testforskyeng.ui.search.SearchViewModel
 
 class SearchDetailFragment : Fragment() {
 

@@ -21,8 +21,7 @@ import com.exfaust.testforskyeng.R
 import com.exfaust.testforskyeng.data.model.Meanings
 import com.exfaust.testforskyeng.ui.searchDetail.SearchDetailFragment
 import com.exfaust.testforskyeng.ui.setOnQueryTextListener
-import com.exfaust.testforskyeng.utils.Events
-import javax.inject.Inject
+import com.exfaust.testforskyeng.data.model.Events
 
 class SearchFragment : Fragment()  {
 

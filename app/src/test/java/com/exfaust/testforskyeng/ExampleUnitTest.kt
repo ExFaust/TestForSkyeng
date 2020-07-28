@@ -1,6 +1,5 @@
 package com.exfaust.testforskyeng
 
-import com.exfaust.testforskyeng.data.model.Meanings
 import com.exfaust.testforskyeng.data.model.SearchResult
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -8,7 +7,6 @@ import io.reactivex.Flowable
 import io.reactivex.Single
 import junit.framework.Assert.assertEquals
 import org.junit.Test
-import java.util.concurrent.TimeUnit
 
 
 /**

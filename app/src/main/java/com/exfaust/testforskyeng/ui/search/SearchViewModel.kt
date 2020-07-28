@@ -1,6 +1,5 @@
 package com.exfaust.testforskyeng.ui.search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,20 +7,15 @@ import androidx.lifecycle.ViewModel
 import com.exfaust.testforskyeng.App
 import com.exfaust.testforskyeng.data.SearchRepository
 import com.exfaust.testforskyeng.data.model.Meanings
-import com.exfaust.testforskyeng.data.model.SearchResult
-import com.exfaust.testforskyeng.data.model.Translation
-import com.exfaust.testforskyeng.utils.Events
+import com.exfaust.testforskyeng.data.model.Events
 import com.exfaust.testforskyeng.utils.NetHelper
 import com.exfaust.testforskyeng.utils.NoConnectivityException
 import com.exfaust.testforskyeng.utils.SingleNetworkEvent
 import io.reactivex.Flowable
-import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import java.util.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
-import kotlin.collections.ArrayList
 
 class SearchViewModel : ViewModel() {
 
@@ -59,7 +53,7 @@ class SearchViewModel : ViewModel() {
             .switchMapSingle {text:String ->
                 netHelper.checkConnection()
                     .filter { it }
-                    .flatMapSingle { searchRepository.search(text) }
+                    .flatMapSingle { searchRepository.search(text) }//TODO добавить обработку очищения поля ввода
                     .flatMapPublisher {Flowable.fromIterable(it)}
                     .map { it.meanings }
                     .flatMapIterable { it }

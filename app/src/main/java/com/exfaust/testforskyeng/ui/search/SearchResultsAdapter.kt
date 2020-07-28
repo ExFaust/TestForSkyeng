@@ -7,8 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.exfaust.testforskyeng.R
 import com.exfaust.testforskyeng.data.model.Meanings
-import com.exfaust.testforskyeng.data.model.SearchResult
-import com.exfaust.testforskyeng.data.model.Translation
 
 class SearchResultsAdapter(var items: List<Meanings>, val callback: Callback) : RecyclerView.Adapter<SearchResultsAdapter.SearchResultHolder>() {
 

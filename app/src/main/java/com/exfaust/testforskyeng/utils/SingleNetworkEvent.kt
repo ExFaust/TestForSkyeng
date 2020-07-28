@@ -1,6 +1,8 @@
 package com.exfaust.testforskyeng.utils
 
-class SingleNetworkEvent (val event:Events){
+import com.exfaust.testforskyeng.data.model.Events
+
+class SingleNetworkEvent (val event: Events){
 
 
 }
